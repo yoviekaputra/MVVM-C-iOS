@@ -9,16 +9,16 @@
 import Foundation
 
 class HomeViewModel {
+    private var repo: DataRepository!
+    
     let homeItemSelected = DelegateView<TeamModel>()
     let aboutSelected = DelegateView<Void>()
     
+    init(repository: DataRepository) {
+        self.repo = repository
+    }
+    
     func fetctTeam() -> [TeamModel] {
-        return [
-            TeamModel(name: "MU", description: "", log: "", imageUrl: "https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"),
-            TeamModel(name: "MU", description: "", log: "", imageUrl: "https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"),
-            TeamModel(name: "MU", description: "", log: "", imageUrl: "https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"),
-            TeamModel(name: "MU", description: "", log: "", imageUrl: "https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"),
-            TeamModel(name: "MU", description: "", log: "", imageUrl: "https://upload.wikimedia.org/wikipedia/id/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png")
-        ]
+        return repo.fetchTeams()
     }
 }

@@ -9,5 +9,8 @@
 import Foundation
 
 class DataRepository {
-    
+    func fetchTeams() -> [TeamModel] {
+        let data = JsonUtils().getJson(filename: "dummy", model: [TeamModel].self)
+        return data ?? []
+    }
 }

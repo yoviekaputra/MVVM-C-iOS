@@ -10,6 +10,13 @@
 		976082B724B1C10C008BF085 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976082B624B1C10C008BF085 /* CircleImageView.swift */; };
 		976082B924B1C420008BF085 /* AboutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976082B824B1C420008BF085 /* AboutCoordinator.swift */; };
 		976082BB24B1C46B008BF085 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976082BA24B1C46B008BF085 /* AboutViewModel.swift */; };
+		976082BE24B1D3EA008BF085 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 976082BD24B1D3EA008BF085 /* dummy.json */; };
+		976082C024B1D766008BF085 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976082BF24B1D766008BF085 /* JsonUtils.swift */; };
+		976082C324B1E868008BF085 /* splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 976082C224B1E868008BF085 /* splashscreen.png */; };
+		976082C524B1E87A008BF085 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 976082C424B1E87A008BF085 /* home.png */; };
+		976082C724B1E886008BF085 /* detail.png in Resources */ = {isa = PBXBuildFile; fileRef = 976082C624B1E886008BF085 /* detail.png */; };
+		976082C924B1E893008BF085 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 976082C824B1E893008BF085 /* profile.png */; };
+		976082CB24B1E8C8008BF085 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 976082CA24B1E8C8008BF085 /* README.md */; };
 		9769115D24B0687300F48564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769115C24B0687300F48564 /* AppDelegate.swift */; };
 		9769116624B0687700F48564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9769116524B0687700F48564 /* Assets.xcassets */; };
 		9769116924B0687700F48564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9769116724B0687700F48564 /* LaunchScreen.storyboard */; };
@@ -38,6 +45,13 @@
 		976082B624B1C10C008BF085 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		976082B824B1C420008BF085 /* AboutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCoordinator.swift; sourceTree = "<group>"; };
 		976082BA24B1C46B008BF085 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		976082BD24B1D3EA008BF085 /* dummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
+		976082BF24B1D766008BF085 /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		976082C224B1E868008BF085 /* splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashscreen.png; sourceTree = "<group>"; };
+		976082C424B1E87A008BF085 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		976082C624B1E886008BF085 /* detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail.png; sourceTree = "<group>"; };
+		976082C824B1E893008BF085 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		976082CA24B1E8C8008BF085 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9769115924B0687300F48564 /* football-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "football-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9769115C24B0687300F48564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9769116524B0687700F48564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,11 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		976082C124B1E846008BF085 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				976082C224B1E868008BF085 /* splashscreen.png */,
+				976082C424B1E87A008BF085 /* home.png */,
+				976082C624B1E886008BF085 /* detail.png */,
+				976082C824B1E893008BF085 /* profile.png */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		9769115024B0687300F48564 = {
 			isa = PBXGroup;
 			children = (
 				9769115B24B0687300F48564 /* football-app */,
+				976082C124B1E846008BF085 /* Preview */,
 				9769115A24B0687300F48564 /* Products */,
+				976082CA24B1E8C8008BF085 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +127,7 @@
 				9769117124B068E900F48564 /* Features */,
 				9769116524B0687700F48564 /* Assets.xcassets */,
 				9769116A24B0687700F48564 /* Info.plist */,
+				976082BD24B1D3EA008BF085 /* dummy.json */,
 			);
 			path = "football-app";
 			sourceTree = "<group>";
@@ -272,6 +300,7 @@
 				9769119F24B0C7CB00F48564 /* CardView.swift */,
 				976911A324B0D63900F48564 /* DelegateView.swift */,
 				976082B624B1C10C008BF085 /* CircleImageView.swift */,
+				976082BF24B1D766008BF085 /* JsonUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -335,10 +364,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9769116924B0687700F48564 /* LaunchScreen.storyboard in Resources */,
+				976082C924B1E893008BF085 /* profile.png in Resources */,
 				9769118E24B0B2F900F48564 /* HomeItemCell.xib in Resources */,
 				9769117D24B06FA500F48564 /* HomeVC.xib in Resources */,
 				9769116624B0687700F48564 /* Assets.xcassets in Resources */,
+				976082C324B1E868008BF085 /* splashscreen.png in Resources */,
+				976082CB24B1E8C8008BF085 /* README.md in Resources */,
 				9769119E24B0C5F700F48564 /* AboutVC.xib in Resources */,
+				976082BE24B1D3EA008BF085 /* dummy.json in Resources */,
+				976082C524B1E87A008BF085 /* home.png in Resources */,
+				976082C724B1E886008BF085 /* detail.png in Resources */,
 				9769119A24B0C5A100F48564 /* TeamDetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +402,7 @@
 				9769117924B06AB900F48564 /* HomeCoordinator.swift in Sources */,
 				9769119D24B0C5F700F48564 /* AboutVC.swift in Sources */,
 				976911A424B0D63900F48564 /* DelegateView.swift in Sources */,
+				976082C024B1D766008BF085 /* JsonUtils.swift in Sources */,
 				976911A024B0C7CB00F48564 /* CardView.swift in Sources */,
 				9769119024B0BF6100F48564 /* DataRepository.swift in Sources */,
 			);
@@ -515,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yoviputra.football-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -534,7 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yoviputra.football-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

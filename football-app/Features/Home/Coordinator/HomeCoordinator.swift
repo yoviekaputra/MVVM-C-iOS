@@ -9,15 +9,21 @@
 import UIKit
 
 class HomeCoordinator: BaseCoordinator {
-    private let viewModel = HomeViewModel()
+    private var viewModel: HomeViewModel!
     
     override func start() {
+        setupData()
         setupBinding()
         
         let homeVC = HomeVC()
         homeVC.viewModel = viewModel
         self.navigationController = UINavigationController(rootViewController: homeVC)
         self.navigationController.viewControllers = [homeVC]
+    }
+    
+    private func setupData() {
+        let repository = DataRepository()
+        viewModel = HomeViewModel(repository: repository)
     }
     
     private func setupBinding() {

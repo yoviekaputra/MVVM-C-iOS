@@ -28,11 +28,11 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9yi-2y-4gM">
-                                <rect key="frame" x="104" y="16" width="303" height="33.5"/>
+                                <rect key="frame" x="104" y="35.5" width="303" height="33.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9Y-zj-DEB">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -48,11 +48,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LRJ-uM-ALR" firstAttribute="top" secondItem="Z7p-Dj-nWC" secondAttribute="top" constant="16" id="9Tc-Vx-U33"/>
-                            <constraint firstItem="9yi-2y-4gM" firstAttribute="top" secondItem="LRJ-uM-ALR" secondAttribute="top" id="ANb-SM-o9y"/>
                             <constraint firstAttribute="trailing" secondItem="9yi-2y-4gM" secondAttribute="trailing" constant="16" id="VuC-R4-A5A"/>
                             <constraint firstItem="LRJ-uM-ALR" firstAttribute="leading" secondItem="Z7p-Dj-nWC" secondAttribute="leading" constant="16" id="bRc-s5-AqM"/>
+                            <constraint firstItem="9yi-2y-4gM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z7p-Dj-nWC" secondAttribute="top" constant="16" id="d6D-kz-goz"/>
                             <constraint firstAttribute="bottom" secondItem="LRJ-uM-ALR" secondAttribute="bottom" constant="16" id="gDd-Ig-ueX"/>
                             <constraint firstItem="9yi-2y-4gM" firstAttribute="leading" secondItem="LRJ-uM-ALR" secondAttribute="trailing" constant="16" id="u2P-Hu-3m1"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9yi-2y-4gM" secondAttribute="bottom" constant="16" id="vDG-od-Lpa"/>
+                            <constraint firstItem="9yi-2y-4gM" firstAttribute="centerY" secondItem="LRJ-uM-ALR" secondAttribute="centerY" id="zrm-yP-M8I"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
@@ -62,10 +64,13 @@
                                 <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
-                                <real key="value" value="1"/>
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.20000000000000001"/>
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -78,6 +83,7 @@
                     <constraint firstItem="Z7p-Dj-nWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="sS1-th-KHi"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatar" destination="LRJ-uM-ALR" id="ASw-1l-pJw"/>

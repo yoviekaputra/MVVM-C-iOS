@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct TeamModel {
+struct TeamModel: Codable {
     var name: String
     var description: String
-    var log: String
     var imageUrl: String
 }

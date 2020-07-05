@@ -23,8 +23,9 @@ class HomeVC: UIViewController {
 extension HomeVC {
     private func setupUI() {
         let me = UIBarButtonItem(title: "Me", style: .done, target: self, action: #selector(aboutClicked))
-        navigationItem.title = "Football Team"
+        navigationItem.title = "Home"
         navigationItem.rightBarButtonItem = me
+        navigationController?.navigationBar.barTintColor = .white
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,16 +50,17 @@ extension HomeVC {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return data.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: HomeItemCell.identifier, for: indexPath) as? HomeItemCell {
-            cell.binding(model: data[indexPath.row])
+            let model = data[indexPath.row]
+            cell.binding(model: model)
             return cell
         }
         return UITableViewCell()
