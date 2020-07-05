@@ -37,6 +37,8 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     private func navigateToAbout() {
-        
+        let about = AboutCoordinator()
+        about.navigationController = navigationController
+        start(coordinator: about)
     }
 }

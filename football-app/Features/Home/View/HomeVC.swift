@@ -22,6 +22,10 @@ class HomeVC: UIViewController {
 
 extension HomeVC {
     private func setupUI() {
+        let me = UIBarButtonItem(title: "Me", style: .done, target: self, action: #selector(aboutClicked))
+        navigationItem.title = "Football Team"
+        navigationItem.rightBarButtonItem = me
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -36,6 +40,10 @@ extension HomeVC {
     private func setupData() {
         data = viewModel.fetctTeam()
         tableView.reloadData()
+    }
+    
+    @objc private func aboutClicked() {
+        viewModel.aboutSelected.accept?(())
     }
 }
 

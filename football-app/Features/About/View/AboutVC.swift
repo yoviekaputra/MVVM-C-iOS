@@ -9,22 +9,29 @@
 import UIKit
 
 class AboutVC: UIViewController {
-
+    var viewModel: AboutViewModel!
+    @IBOutlet weak var avatar: CircleImageView!
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var profileEmail: UILabel!
+    @IBOutlet weak var profileGithub: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.viewDidDisapear.accept?(())
     }
-    */
+}
 
+extension AboutVC {
+    private func setupUI() {
+        navigationItem.title = "About Me"
+        avatar.image = viewModel.avatar
+        profileName.text = viewModel.name
+        profileEmail.text = viewModel.email
+        profileGithub.text = viewModel.github
+    }
 }
