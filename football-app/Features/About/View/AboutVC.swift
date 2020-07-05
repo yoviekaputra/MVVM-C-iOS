@@ -29,7 +29,7 @@ class AboutVC: UIViewController {
 extension AboutVC {
     private func setupUI() {
         navigationItem.title = "About Me"
-        avatar.image = viewModel.avatar
+        avatar.load(fromUrl: viewModel.avatar)
         profileName.text = viewModel.name
         profileEmail.text = viewModel.email
         profileGithub.text = viewModel.github
