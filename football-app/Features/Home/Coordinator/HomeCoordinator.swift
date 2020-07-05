@@ -34,6 +34,10 @@ class HomeCoordinator: BaseCoordinator {
         viewModel.aboutSelected.subscribe(to: self) { this, _ in
             this.navigateToAbout()
         }
+        
+        viewModel.viewDidDisappear.subscribe(to: self) { this, _ in
+            this.parentCoordinator?.didFinish(coordinator: this)
+        }
     }
     
     private func navigateToDetail(data: TeamModel) {

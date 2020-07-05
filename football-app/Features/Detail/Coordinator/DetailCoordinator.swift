@@ -26,7 +26,7 @@ class DetailCoordinator: BaseCoordinator {
     }
     
     private func setupBinding() {
-        viewModel.didDisappear.subscribe(to: self) { this, _ in
+        viewModel.viewDidDisappear.subscribe(to: self) { this, _ in
             this.parentCoordinator?.didFinish(coordinator: this)
         }
     }

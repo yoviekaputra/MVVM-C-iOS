@@ -9,5 +9,5 @@
 import Foundation
 
 class TeamDetailViewModel {
-    var didDisappear = DelegateView<Void>()
+    var viewDidDisappear = DelegateView<Void>()
 }

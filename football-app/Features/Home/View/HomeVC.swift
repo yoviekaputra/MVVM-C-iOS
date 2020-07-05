@@ -18,6 +18,11 @@ class HomeVC: UIViewController {
         setupUI()
         setupData()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.viewDidDisappear.accept?(())
+    }
 }
 
 extension HomeVC {

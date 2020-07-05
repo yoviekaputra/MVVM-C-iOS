@@ -11,6 +11,7 @@ import Foundation
 class HomeViewModel {
     private var repo: DataRepository!
     
+    let viewDidDisappear = DelegateView<Void>()
     let homeItemSelected = DelegateView<TeamModel>()
     let aboutSelected = DelegateView<Void>()
     

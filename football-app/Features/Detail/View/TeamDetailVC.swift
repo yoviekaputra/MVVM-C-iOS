@@ -22,7 +22,7 @@ class TeamDetailVC: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        viewModel.didDisappear.accept?(())
+        viewModel.viewDidDisappear.accept?(())
     }
 }
 
